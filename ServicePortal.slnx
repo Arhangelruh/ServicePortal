@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/ServicePortal.UI/ServicePortal.UI.csproj" Id="6394f413-9d6a-4737-b804-9738d311923e" />
+  <Project Path="src/ServicePortal/Portal.csproj" />
+</Solution>

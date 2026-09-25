@@ -1,0 +1,21 @@
+﻿<head>
+    <link rel="stylesheet" href="_content/ServicePortal.UI/css/header.css"/>
+</head>
+<div class="app-header">
+    <div class="app-header__wrapper">
+        <div class="app-header__logo">
+            <div class="app-header-logo__icon">
+                <img class="app-header-logo__icon-img" src="@ApplicationLogo" alt="" />
+            </div>
+            <div class="app-header-logo__text">@ApplicationName</div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string? ApplicationName { get; set; }
+
+    [Parameter]
+    public string? ApplicationLogo { get; set; }
+}

@@ -1,0 +1,26 @@
+﻿@using ServicePortal.UI.Models
+@inherits LayoutComponentBase
+@inject AppShellState Shell
+
+
+<div class="base">
+
+    <Header ApplicationName="@Shell.ApplicationName" ApplicationLogo="@Shell.ApplicatinLogo" />
+
+    <div class="ui-layout">
+
+        <Sidebar NavigationServices="@Shell.NavigationItems" ActiveItem="@Shell.ActiveItem" />
+
+        <main class="ui-content">
+
+            @Body
+
+        </main>
+
+    </div>
+
+</div>
+
+@code {
+
+}

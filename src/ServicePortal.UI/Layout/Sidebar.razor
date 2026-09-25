@@ -1,0 +1,37 @@
+﻿@using ServicePortal.UI.Models
+<head>
+    <link rel="stylesheet" href="_content/ServicePortal.UI/css/sidebar.css" />
+</head>
+<div class="app-sidebar">
+    <div class="app-sidebar__head">
+    </div>
+    <div class="app-sidebar__body">
+        @foreach (var service in NavigationServices)
+        {
+            <a href="@service.Url" class="app-sidebar__item">
+                @if (!string.IsNullOrEmpty(service.Icon))
+                {
+                    <div class="app-sidebar__icon">
+                        <img class="app-sidebar__icon-img" src="@service.Icon" alt="" />
+                    </div>
+                }
+                <div class="app-sidebar__text">
+                    @service.Name
+                </div>
+            </a>
+
+        }
+    </div>    
+    <div class="app-sidebar__foot">
+</div>
+
+    
+</div>
+
+@code {
+    [Parameter]
+    public List<NavigationItem> NavigationServices { get; set; } = [];
+
+    [Parameter]
+    public string? ActiveItem{ get; set; }
+}

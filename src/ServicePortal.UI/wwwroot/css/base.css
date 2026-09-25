@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--ui-font-family);
+    color: var(--ui-color-text);
+}
+
+.app-shell{
+    width: 100%;
+    margin: 0 auto;
+    min-width: 930px;  
+}
+
+.ui-layout{
+    margin-left: 50px;
+}

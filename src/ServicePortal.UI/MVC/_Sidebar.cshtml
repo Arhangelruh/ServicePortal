@@ -1,0 +1,22 @@
+﻿@using ServicePortal.UI.Models
+
+@model IReadOnlyCollection<NavigationItem>
+
+    <div class="app-sidebar">
+        <div class="app-sidebar__body">
+        @foreach(var service in Model)
+        {
+            <a href="@service.Url" class="app-sidebar__item">
+                @if (!string.IsNullOrEmpty(service.Icon))
+                {
+                    <div class="app-sidebar__icon">
+                        <img src="@service.Icon" alt=""/>
+                    </div>
+                }
+                <div class="app-sidebar__text">
+                    @service.Name
+                </div>
+            </a>
+        }
+        </div>
+    </div>

@@ -1,0 +1,30 @@
+.app-header{
+    height: 50px;
+}
+
+.app-header__wrapper{
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app-header__logo{
+    display: flex;
+    align-items: center;
+}
+
+.app-header-logo__icon-img{
+    width: 20px;
+    height: 20px;
+}
+
+.app-header-logo__text{
+   margin-left: 10px;
+   color: #0000008f;
+}
