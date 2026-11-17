@@ -5,10 +5,11 @@
 <div class="app-sidebar">
     <div class="app-sidebar__head">
     </div>
-    <div class="app-sidebar__body">
+    <div class="app-sidebar__body">        
         @foreach (var service in NavigationServices)
         {
-            <a href="@service.Url" class="app-sidebar__item">
+            var active = service.Id == appShell?.ActiveItem;
+            <a href="@service.Url" class="app-sidebar__item @(active ? "app-sidebar_activeitem" : "")">
                 @if (!string.IsNullOrEmpty(service.Icon))
                 {
                     <div class="app-sidebar__icon">
@@ -30,8 +31,13 @@
 
 @code {
     [Parameter]
-    public List<NavigationItem> NavigationServices { get; set; } = [];
+    public AppShellState? appShell { get; set; }
 
-    [Parameter]
-    public string? ActiveItem{ get; set; }
-}
+    private List<NavigationItem> NavigationServices { get; set; } = [];
+
+    protected override void OnInitialized()
+    {
+        NavigationServices = appShell?.NavigationItems ?? [];       
+    }
+
+    }

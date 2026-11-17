@@ -1,0 +1,26 @@
+﻿@using ServicePortal.UI.Models
+<head>
+    <link rel="stylesheet" href="_content/ServicePortal.UI/css/error.css" />
+</head>
+
+<div class="error-page">
+    <div class="error-page_content">
+        @if (Model.StatusCode.HasValue)
+        {
+            <div class="error-code">
+                @Model.StatusCode
+            </div>
+        }
+        <div class="error-title">
+            @Model.Title
+        </div>
+        <div class="error_mesage">
+            @Model.Message
+        </div>
+    </div>
+</div>
+
+    @code {
+        [Parameter, EditorRequired]
+        public ErrorPageModel Model { get; set; } = new();
+}

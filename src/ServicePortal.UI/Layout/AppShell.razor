@@ -3,13 +3,13 @@
 @inject AppShellState Shell
 
 
-<div class="base">
+<div class="app-shell">
 
     <Header ApplicationName="@Shell.ApplicationName" ApplicationLogo="@Shell.ApplicatinLogo" />
 
     <div class="ui-layout">
 
-        <Sidebar NavigationServices="@Shell.NavigationItems" ActiveItem="@Shell.ActiveItem" />
+        <Sidebar appShell="@Shell"/>
 
         <main class="ui-content">
 

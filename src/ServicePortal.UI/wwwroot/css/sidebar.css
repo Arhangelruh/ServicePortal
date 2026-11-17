@@ -80,3 +80,7 @@
     margin-top: auto;
     margin-bottom: 0px;
 }
+
+.app-sidebar_activeitem{
+  font-weight: bold;
+}

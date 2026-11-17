@@ -2,10 +2,23 @@
     box-sizing: border-box;
 }
 
+:root {
+    --ui-font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --ui-color-text:black;
+    --ui-background-color:#f5f5f5;
+    --ui-header-text-color:#0000008f;
+    --ui-text2-color:#1D9E75; 
+    --ui-border-color:#e8e8e8;
+    --ui-border-hover-color:#1D9E75;    
+    --ui-border: 1px solid var(--ui-border-color);    
+}
+
+
 body {
     margin: 0;
     font-family: var(--ui-font-family);
     color: var(--ui-color-text);
+    background: var(--ui-background-color);
 }
 
 .app-shell{
@@ -16,4 +29,59 @@ body {
 
 .ui-layout{
     margin-left: 50px;
+}
+
+/*-------------------------------------Form-------------------------------*/
+
+.form-header{
+  text-align: center;
+  margin-top: 40px;
+  color: var(--ui-header-text-color);
+}
+
+.form-body{  
+  background: white;
+  border-radius: 12px;
+  border: var(--ui-border);
+  padding: 16px 20px;
+  width: 500px;
+  margin: 15vh auto 5vh auto;
+
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-label{
+  width: 90%;
+  margin-top: 1rem;
+}
+
+.form-field{
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: var(--ui-border);
+  background: white;
+  width: 100%;
+}
+
+.form-button{
+  width: 80%;
+  margin-top: 1rem;
+  border: var(--ui-border);
+  border-radius: 20px;
+}
+
+.form-button:hover{
+  border-radius: 20px;
+  border-color: var(--ui-border-hover-color);
+  box-shadow: 0 0 0 2px rgba(29, 158, 117, 0.15);
+}
+
+.form-enter-button{
+   color: var(--ui-header-text-color);
 }

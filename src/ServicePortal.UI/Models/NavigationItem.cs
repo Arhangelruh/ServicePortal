@@ -5,7 +5,7 @@
 		/// <summary>
 		/// Service Id.
 		/// </summary>
-		int Id { get; set; }
+		public string? Id { get; set; }
 
 		/// <summary>
 		/// Service name.

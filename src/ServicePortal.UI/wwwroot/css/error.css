@@ -1,0 +1,29 @@
+.error-page{
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.error-page_content{
+    width: 80%;    
+    height: 60vh;
+}
+
+.error-code{
+    text-decoration-color: black;
+    font-size: xxx-large;
+    font-weight: bold;
+    margin-top: 20vh;
+}
+
+.error-title{
+    color: red;
+    margin-top: 20px;
+}
+
+.error_mesage{
+    margin:20px;
+    color: red;
+}
