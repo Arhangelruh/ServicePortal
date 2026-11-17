@@ -1,0 +1,26 @@
+﻿@page "/"
+@using Portal.Services
+
+@inject NavigationService Services    
+
+
+    <PageHeader
+        Title="Добро пожаловать на домашнюю страничку сервисов Статусбанка."
+        Description="Пожалуйста выберите интересующий вас сервис что бы продолжить." />
+
+        <div class="service-grid">
+    
+            @foreach (var service in Services.Services)
+            {
+              <a class="service-card" href="@service.Url">
+                <Card >
+                    <img class="service-card-img" src="@service.Icon" />
+                <div class="service-card-name">@service.Name</div>
+                </Card>
+              </a>
+            }
+        </div>
+
+@code {    
+        private string? ActiveService = "home";
+}

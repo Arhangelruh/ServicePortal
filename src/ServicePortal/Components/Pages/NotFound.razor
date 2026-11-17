@@ -1,0 +1,14 @@
+﻿@page "/NotFound"
+@using ServicePortal.UI.Layout
+@using ServicePortal.UI.Models
+
+<ErrorPage Model="_model" />
+
+@code {
+    private ErrorPageModel _model = new()
+    {
+        StatusCode = 404,
+        Title = "Страница не найдена.",
+        Message = "Запрашиваемой страницы не существует."
+    };
+}

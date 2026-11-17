@@ -1,0 +1,19 @@
+﻿@using Portal.Services
+@using ServicePortal.UI.Models
+
+@inject NavigationService Services
+@inject AppShellState Shell
+
+@code
+{
+    protected override void OnInitialized()
+    {
+        Shell.ApplicationName = "Домашняя страница";
+
+        Shell.ApplicatinLogo = "/images/Home.svg";
+
+        Shell.NavigationItems = Services.Services;
+
+        Shell.ActiveItem = "home";
+    }
+}

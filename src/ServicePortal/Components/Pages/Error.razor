@@ -1,0 +1,9 @@
+﻿@page "/Error"
+@using ServicePortal.UI.Layout
+@using ServicePortal.UI.Models
+
+<ErrorPage Model="_model"/>
+
+@code {
+    private ErrorPageModel _model { get; set; } = new();
+}

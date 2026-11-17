@@ -1,0 +1,11 @@
+/* CSS for PageHeader component */
+.ui-page-header__main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;    
+    color: var(--ui-header-text-color);
+}
+
+
+ 
